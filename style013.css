@@ -1,0 +1,63 @@
+/* Dark Mode Elegant Color Palette */
+:root {
+  --background: #0D1117;
+  --primary: #58A6FF;
+  --accent: #A5D6A7;
+  --text: #C9D1D9;
+  --hover: #F85149;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--background);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--accent);
+}
+
+h1 {
+  color: var(--primary);
+}
+
+nav a {
+  color: var(--text);
+  margin-left: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #F85149;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: var(--primary);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0B0F14;
+  color: var(--accent);
+  border-top: 1px solid var(--accent);
+}

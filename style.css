@@ -1,0 +1,219 @@
+body{
+    background-color: #0D1117;
+    color: #58A6FF;
+}
+
+h1{
+    color: #C9D1D9;
+}
+
+.fix{
+    position: static;
+    margin-top: 5px;
+    height: auto;
+    width: 100%;
+
+}
+
+nav{
+    position: absolute;
+    font-size: 30px;
+    float: left;
+    padding: 5px;
+    top: 9px;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 900px;
+    display: flex;
+    justify-content: space-between;
+    word-spacing: 15px;
+   
+}
+
+.navbar a{
+    padding: 15px;
+    margin-right: 5px;
+    color: #C9D1D9;
+}
+
+nav a:hover {
+  color: #F85149;
+}
+
+.content{
+    position: relative;
+    height: 450px;
+    width: 100%;
+    line-height: 27px;
+    margin-top: 270px;
+    font-size: 21px;
+    /* background-color: red; */
+}
+
+#name{
+    position: absolute;
+    margin-left: 216px;
+    margin-top: 46px;
+    padding-right: 391px;
+}
+
+#help{
+    position: absolute;
+    margin-left: 204px;
+    margin-top: 237px;
+    height: 20px;
+    font-size: 35px;
+    /* width: 100px; */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#cv{
+    position: absolute;
+    margin-left: 312px;
+    margin-top: 237px;
+    height: 16px;
+    font-size: 35px;
+    width: 100px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div button:hover{
+  color: #F85149;
+  background-color: #0D1117;
+}
+
+#pic{
+    position: absolute;
+    right: 100px;
+    height: auto;
+    width: auto;
+    bottom: 130px;
+}
+
+.pic:hover{
+    filter: drop-shadow(5px 6px 7px #F85149);
+    height: 450px;
+    width: 250px;
+}
+
+.aboutme{
+    height: 550px;
+    width: 100%;
+    position: relative;
+    /* background-color: aquamarine; */
+    top: -56px;
+}
+
+#mypic{
+    position: absolute;
+    margin-left: 80px;
+    top: 60px;
+    filter: drop-shadow(5px 6px 7px #F85149);
+}
+
+#caption{
+    position: absolute;
+    margin-left: 453px;
+    top: 33px;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.logo{
+    height: 250px;
+    width: 100%;
+    top: 10px;
+    position: relative;
+}
+
+#skill{
+    text-align: center;
+    font-size: 35px;
+}
+
+#img_logo{
+    position: absolute;
+    left: 8%;
+    top: 86px;
+    transition: transform 4s ease;
+}
+
+#c{
+    height: 150px;
+    width: 100px;
+    position: absolute;
+    left: 400px;
+    color: #58A6FF;
+    text-align: center;
+}
+
+#html{
+    height: 150px;
+    width: 100px;
+    position: absolute;
+    color: #58A6FF;
+    text-align: center;
+    left: 550px;
+}
+
+#css{
+    height: 150px;
+    width: 100px;
+    position: absolute;
+    color: #58A6FF;
+    text-align: center;
+    left: 700px;
+}
+
+#contact{
+    position: relative;
+    margin-top: 100px;
+    height: 400px;
+    width: 100%;
+}
+
+#info{
+    position: absolute;
+    line-height: 40px;
+    margin-left: 250px;
+    margin-bottom : 30px;
+    margin-top: 30px;
+    font-size: 25px;
+    width: 500px;
+}
+
+#button1{
+    position: absolute;
+    margin-left: 660px;
+    margin-top: 260px;
+    height: 20px;
+    font-size: 35px;
+    width: 150px;
+    padding: 15px 32px;
+    text-align: center;
+}
+
+.footer{
+    position: relative;
+    margin-left: 720px;
+    height: 95px;
+    
+}
+.social{
+    position: absolute;
+    margin-left: -37px;
+    border-radius: 20px;
+    
+}
+
+.name1{
+    height: auto;
+    width: 100%;
+    font-size: 18px;
+}
