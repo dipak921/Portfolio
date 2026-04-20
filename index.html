@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipak - .NET Full Stack Developer</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">Dipak<span class="text-primary">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center bg-light">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3 mt-5">Hi, I'm <span class="text-primary">Dipak</span></h1>
+            <h2 class="h3 text-secondary mb-4">.NET Full Stack Developer</h2>
+            <p class="lead mb-4 mx-auto text-muted" style="max-width: 650px;">
+                I build robust and scalable web applications using modern technologies. Passionate about creating seamless user experiences and efficient backend architectures.
+            </p>
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="#contact" class="btn btn-outline-primary btn-lg px-4">Contact Me</a>
+                <!-- Resume Download Button Requirement -->
+                <a href="resume.pdf" download class="btn btn-primary btn-lg px-4 shadow-sm">
+                    <i class="fas fa-download me-2"></i>Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 text-center d-flex justify-content-center">
+                    <div class="position-relative about-img-container">
+                        <!-- Elegant animated backdrop -->
+                        <div class="about-img-backdrop position-absolute rounded-circle shadow-sm"></div>
+                        <!-- Loading the custom local profile image -->
+                        <img src="img/dipak.png" alt="Dipak Profile" class="about-img img-fluid rounded-circle shadow-lg position-relative z-1">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="fw-bold mb-4">About <span class="text-primary">Me</span></h2>
+                    
+                    <h5 class="fw-semibold mb-2">Professional Summary</h5>
+                    <p class="text-muted mb-4 pb-2" style="line-height: 1.7;">
+                        A motivated and detail-oriented .NET Full Stack Developer with a strong foundation in web technologies and a passion for building scalable, user-friendly applications. Proficient in front-end frameworks like React.js and Bootstrap, as well as back-end development using C#, ASP.NET Core, and SQL Server. Quick learner, eager to contribute to a collaborative team and deliver high-quality software solutions.
+                    </p>
+                    
+                    <h5 class="fw-semibold mb-2">Career Objective</h5>
+                    <p class="text-muted mb-4 pb-2" style="line-height: 1.7;">
+                        To secure a challenging entry-level position as a Full Stack Developer where I can leverage my programming skills in ASP.NET Core, React.js, and SQL Server to build innovative web applications, while continuously learning and growing in a professional environment.
+                    </p>
+
+                    <h5 class="fw-semibold mb-3">Soft Skills</h5>
+                    <div class="row pt-2 text-muted g-3">
+                        <div class="col-sm-6 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-2"></i>Problem Solving</div>
+                        <div class="col-sm-6 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-2"></i>Adaptability & Quick Learner</div>
+                        <div class="col-sm-6 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-2"></i>Teamwork & Collaboration</div>
+                        <div class="col-sm-6 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-2"></i>Effective Communication</div>
+                        <div class="col-sm-6 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-2"></i>Time Management</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Technical <span class="text-primary">Skills</span></h2>
+                <div class="divider mx-auto bg-primary"></div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm skill-card">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary-subtle text-primary rounded-circle mb-4 mx-auto">
+                                <i class="fas fa-laptop-code fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">Frontend</h5>
+                            <ul class="list-unstyled text-muted mb-0">
+                                <li class="mb-2">HTML & CSS</li>
+                                <li class="mb-2">JavaScript</li>
+                                <li class="mb-2">Bootstrap</li>
+                                <li>React.js</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm skill-card">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-success-subtle text-success rounded-circle mb-4 mx-auto">
+                                <i class="fas fa-server fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">Backend</h5>
+                            <ul class="list-unstyled text-muted mb-0">
+                                <li class="mb-2">C#</li>
+                                <li class="mb-2">ASP.NET Core</li>
+                                <li class="mb-2">Web API</li>
+                                <li>Entity Framework</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm skill-card">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-info-subtle text-info rounded-circle mb-4 mx-auto">
+                                <i class="fas fa-database fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">Database</h5>
+                            <ul class="list-unstyled text-muted mb-0">
+                                <li class="mb-2">SQL Server</li>
+                                <li class="mb-2">Relational Design</li>
+                                <li class="mb-2">T-SQL</li>
+                                <li>Data Modeling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm skill-card">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-warning-subtle text-warning rounded-circle mb-4 mx-auto">
+                                <i class="fas fa-tools fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">Tools</h5>
+                            <ul class="list-unstyled text-muted mb-0">
+                                <li class="mb-2">Git</li>
+                                <li class="mb-2">Visual Studio</li>
+                                <li class="mb-2">VS Code</li>
+                                <li>Postman</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">My <span class="text-primary">Projects</span></h2>
+                <div class="divider mx-auto bg-primary"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm project-card overflow-hidden">
+                        <div class="card-img-top bg-dark text-white d-flex align-items-center justify-content-center flex-column" style="height: 220px; background: linear-gradient(45deg, #1f2937, #374151);">
+                            <i class="fas fa-chalkboard-teacher fa-3x mb-3 text-primary"></i>
+                            <span class="fs-5 fw-bold">Tutor Management</span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="mb-3">
+                                <span class="badge bg-primary-subtle text-primary fw-semibold rounded-pill">Web Application</span>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Tutor Management System</h5>
+                            <p class="card-text text-muted" style="font-size: 0.95rem;">A comprehensive web application designed to streamline the process of finding and managing tutors. Implemented user authentication, tutor profiles, booking management, and a robust admin dashboard using ASP.NET Core and SQL Server.</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0 p-4 pt-0">
+                            <div class="d-flex gap-2 flex-wrap text-muted" style="font-size: 0.85rem; font-weight: 500;">
+                                <span>ASP.NET Core</span> • <span>SQL Server</span> • <span>C#</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm project-card overflow-hidden">
+                        <div class="card-img-top bg-dark text-white d-flex align-items-center justify-content-center flex-column" style="height: 220px; background: linear-gradient(45deg, #065f46, #047857);">
+                            <i class="fas fa-laptop-code fa-3x mb-3 text-success"></i>
+                            <span class="fs-5 fw-bold">UpSkillLab</span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="mb-3">
+                                <span class="badge bg-success-subtle text-success fw-semibold rounded-pill">Frontend UI Project</span>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">UpSkillLab – E-Learning App</h5>
+                            <p class="card-text text-muted" style="font-size: 0.95rem;">Designed and developed the user interface for an interactive e-learning platform. Focused on creating a highly responsive and modern user experience with smooth navigation and adaptive layouts.</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0 p-4 pt-0">
+                            <div class="d-flex gap-2 flex-wrap text-muted" style="font-size: 0.85rem; font-weight: 500;">
+                                <span>HTML</span> • <span>CSS</span> • <span>Bootstrap</span> • <span>React.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm project-card overflow-hidden">
+                        <div class="card-img-top bg-dark text-white d-flex align-items-center justify-content-center flex-column" style="height: 220px; background: linear-gradient(45deg, #1e3a8a, #1d4ed8);">
+                            <i class="fas fa-book-reader fa-3x mb-3 text-info"></i>
+                            <span class="fs-5 fw-bold">study2Crack</span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="mb-3">
+                                <span class="badge bg-info-subtle text-info fw-semibold rounded-pill">Full Stack Web App</span>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">study2Crack – E-Learning</h5>
+                            <p class="card-text text-muted" style="font-size: 0.95rem;">Developed a robust, scalable e-learning platform. Implemented a course-centric topic management system, secure authentication, and a responsive public interface for course browsing and learning.</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0 p-4 pt-0">
+                            <div class="d-flex gap-2 flex-wrap text-muted" style="font-size: 0.85rem; font-weight: 500;">
+                                <span>ASP.NET Core MVC</span> • <span>Entity Framework</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">My <span class="text-primary">Education</span></h2>
+                <div class="divider mx-auto bg-primary"></div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="timeline position-relative">
+                        <!-- Education Item 1 -->
+                        <div class="timeline-item position-relative mb-4">
+                            <div class="d-flex flex-column flex-md-row align-items-md-start gap-4">
+                                <div class="timeline-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 shadow m-0 mx-md-0 mx-auto" style="width: 70px; height: 70px;">
+                                    <i class="fas fa-user-graduate fa-2x"></i>
+                                </div>
+                                <div class="timeline-content bg-white p-4 rounded shadow-sm w-100 border-start border-4 border-primary">
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-3">
+                                        <h4 class="fw-bold mb-2 mb-sm-0">BBA in Computer Applications</h4>
+                                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">Aug 2022 – Apr 2025</span>
+                                    </div>
+                                    <h6 class="text-primary fw-bold mb-3"><i class="fas fa-university me-2"></i>Savitribai Phule Pune University, Pune</h6>
+                                    <p class="text-muted mb-0">Acquired comprehensive knowledge encompassing modern software development, web programming, algorithms, database systems, and fundamental business applications.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education Item 2 -->
+                        <div class="timeline-item position-relative mb-4">
+                            <div class="d-flex flex-column flex-md-row align-items-md-start gap-4">
+                                <div class="timeline-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 shadow m-0 mx-md-0 mx-auto" style="width: 70px; height: 70px;">
+                                    <i class="fas fa-book-open fa-2x"></i>
+                                </div>
+                                <div class="timeline-content bg-white p-4 rounded shadow-sm w-100 border-start border-4 border-primary">
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-3">
+                                        <h4 class="fw-bold mb-2 mb-sm-0">HSC</h4>
+                                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">June 2021 – Mar 2022</span>
+                                    </div>
+                                    <h6 class="text-primary fw-bold mb-3"><i class="fas fa-university me-2"></i>Shri Chhatrapati Shivaji College Karjgaon</h6>
+                                    <p class="text-muted mb-0">Completed Higher Secondary Certificate. Scored: <strong>64%</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education Item 3 -->
+                        <div class="timeline-item position-relative mb-4">
+                            <div class="d-flex flex-column flex-md-row align-items-md-start gap-4">
+                                <div class="timeline-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 shadow m-0 mx-md-0 mx-auto" style="width: 70px; height: 70px;">
+                                    <i class="fas fa-school fa-2x"></i>
+                                </div>
+                                <div class="timeline-content bg-white p-4 rounded shadow-sm w-100 border-start border-4 border-primary">
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-3">
+                                        <h4 class="fw-bold mb-2 mb-sm-0">SSC</h4>
+                                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">June 2019 – Mar 2020</span>
+                                    </div>
+                                    <h6 class="text-primary fw-bold mb-3"><i class="fas fa-school me-2"></i>Shivchidambar School Ganeshwadi</h6>
+                                    <p class="text-muted mb-0">Completed Secondary School Certificate. Scored: <strong>67.20%</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Get In <span class="text-primary">Touch</span></h2>
+                <div class="divider mx-auto bg-primary"></div>
+                <p class="text-muted mt-3">Interested in working together or have a question? Feel free to reach out!</p>
+            </div>
+            
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-4">
+                    <div class="contact-info bg-white border text-dark p-5 rounded-4 shadow h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="fw-bold mb-4">Contact Information</h3>
+                            
+                            <div class="d-flex align-items-center mb-4 mt-5">
+                                <div class="icon-box bg-primary text-white rounded-circle shadow-sm me-4 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-envelope fs-5"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Email</h6>
+                                    <a href="mailto:dipak@example.com" class="text-secondary text-decoration-none">dipakchande921@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="icon-box bg-primary text-white rounded-circle shadow-sm me-4 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-phone fs-5"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Phone</h6>
+                                    <span class="text-secondary">+91 9373570576</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="icon-box bg-primary text-white rounded-circle shadow-sm me-4 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-map-marker-alt fs-5"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Location</h6>
+                                    <span class="text-secondary">Pune, Maharashtra</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 pt-4 border-top">
+                            <div class="d-flex gap-3 justify-content-start">
+                                <a href="https://www.linkedin.com/in/dipak-chande/" class="social-icon bg-light text-dark rounded-circle shadow-sm d-flex align-items-center justify-content-center"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/dipak921" class="social-icon bg-light text-dark rounded-circle shadow-sm d-flex align-items-center justify-content-center"><i class="fab fa-github"></i></a>
+                                <a href="https://x.com/dipak_chande_04" class="social-icon bg-light text-dark rounded-circle shadow-sm d-flex align-items-center justify-content-center"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm p-4 p-md-5 rounded-4 h-100">
+                        <div class="card-body p-0">
+                            <h3 class="fw-bold mb-4">Send a Message</h3>
+                            <form id="contactForm">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label fw-semibold text-secondary">Your Name</label>
+                                        <input type="text" class="form-control form-control-lg bg-light border-0" id="name" placeholder="John Doe" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label fw-semibold text-secondary">Your Email</label>
+                                        <input type="email" class="form-control form-control-lg bg-light border-0" id="email" placeholder="john@example.com" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="subject" class="form-label fw-semibold text-secondary">Subject</label>
+                                        <input type="text" class="form-control form-control-lg bg-light border-0" id="subject" placeholder="Project Inquiry" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label fw-semibold text-secondary">Message</label>
+                                        <textarea class="form-control form-control-lg bg-light border-0" id="message" rows="5" placeholder="Your message here..." required></textarea>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="btn btn-primary btn-lg px-5 py-3 fw-bold rounded-pill shadow-sm">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 text-center border-top border-secondary border-opacity-25">
+        <div class="container">
+            <p class="mb-0 text-white-50">&copy; <span id="year"></span> Dipak. All Rights Reserved. Built with <i class="fas fa-heart text-danger"></i> using Bootstrap 5.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
