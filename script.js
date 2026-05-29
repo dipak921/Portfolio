@@ -1,80 +1,135 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // 1. Set the dynamic current year in the footer
-    const yearSpan = document.getElementById("year");
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
-
-    // 2. Smooth scrolling logic for all anchor links (navigation)
-    const navLinks = document.querySelectorAll('a.nav-link');
-    navLinks.forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-
-            if (targetId && targetId.startsWith('#')) {
-                e.preventDefault();
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    // Offset for the fixed navbar height
-                    const offset = 75;
-                    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-
-                    window.scrollTo({
-                        top: elementPosition - offset,
-                        behavior: 'smooth'
-                    });
-
-                    // Mobile collapse handling if navbar is expanded
-                    const navbarCollapse = document.getElementById('navbarNav');
-                    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-                        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-                            toggle: false
-                        });
-                        bsCollapse.hide();
-                    }
-                }
-            }
-        });
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Initialize AOS (Animate On Scroll)
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false,
+        offset: 50
     });
 
-    // 3. Simple Form Submission Handler
-    const contactForm = document.getElementById("contactForm");
-    if (contactForm) {
-        contactForm.addEventListener("submit", function (e) {
-            e.preventDefault();
+    // 2. Typing Text Effect
+    const typingText = document.querySelector('.typing-text');
+    const roles = ['.NET Full Stack Developer', 'Software Engineer', 'Web Developer'];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingDelay = 150;
+    let erasingDelay = 100;
+    let newTextDelay = 3000; // Delay between current and next text
 
-            // Collect form values
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const subject = document.getElementById("subject").value.trim();
-            const message = document.getElementById("message").value.trim();
+    function type() {
+        const currentRole = roles[roleIndex];
+        let delay = typingDelay;
+        
+        if (isDeleting) {
+            typingText.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+            delay = erasingDelay;
+        } else {
+            typingText.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+            delay = typingDelay;
+        }
 
-            // Format the text for WhatsApp
-            const waText = `Hello Dipak,%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Subject:* ${encodeURIComponent(subject)}%0A*Message:* ${encodeURIComponent(message)}`;
+        if (!isDeleting && charIndex === currentRole.length) {
+            // Pause at the end of the typed word
+            isDeleting = true;
+            delay = newTextDelay; // Wait 3 seconds
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            delay = 500; // Small pause before typing the next word
+        }
 
-            // The WhatsApp phone number (Update this with your actual number, e.g., 919876543210 for India)
-            const phoneNumber = "919373570576";
-
-            // Build the WhatsApp API url
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${waText}`;
-
-            // Open WhatsApp in a new tab/window
-            window.open(whatsappUrl, '_blank');
-
-            // Reset the form
-            contactForm.reset();
-        });
+        setTimeout(type, delay);
+    }
+    
+    // Start typing effect after a small delay
+    if(typingText) {
+        setTimeout(type, 1000);
     }
 
-    // 4. Scroll Spy functionality is handled via bootstrap data attributes in the <body>
-    // but we can add an extra nav background subtle change on scroll
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.opacity = "0.98";
+    // 3. Dark/Light Mode Toggle
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlElement = document.documentElement;
+    
+    // Check local storage for theme preference
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+        if (theme === 'dark') {
+            themeIcon.classList.remove('bi-moon-fill');
+            themeIcon.classList.add('bi-sun-fill');
         } else {
-            navbar.style.opacity = "1";
+            themeIcon.classList.remove('bi-sun-fill');
+            themeIcon.classList.add('bi-moon-fill');
+        }
+    }
+
+    // 4. Back to Top Button & Navbar Scroll Effect
+    const backToTopBtn = document.getElementById('backToTop');
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('active');
+            navbar.classList.add('shadow');
+        } else {
+            backToTopBtn.classList.remove('active');
+            navbar.classList.remove('shadow');
         }
     });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // 5. Contact Form Validation
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (contactForm.checkValidity()) {
+                // If valid, show success message
+                contactForm.classList.add('d-none');
+                formSuccess.classList.remove('d-none');
+                
+                // Optional: reset form after a few seconds and hide success message
+                setTimeout(() => {
+                    contactForm.reset();
+                    contactForm.classList.remove('was-validated');
+                    contactForm.classList.remove('d-none');
+                    formSuccess.classList.add('d-none');
+                }, 5000);
+            }
+
+            contactForm.classList.add('was-validated');
+        }, false);
+    }
+
+    // 6. Dynamic Year for Footer
+    const currentYearSpan = document.getElementById('currentYear');
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
 });

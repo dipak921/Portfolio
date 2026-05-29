@@ -1,90 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dipak - .NET Full Stack Developer</title>
+    <title>Portfolio - .NET Full Stack Developer</title>
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top shadow-sm glass-nav">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#home">Dipak<span class="text-primary">.</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand fw-bold" href="#">Portfolio<span class="text-primary">.</span></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button id="theme-toggle" class="btn btn-outline-secondary rounded-circle theme-btn" aria-label="Toggle Theme">
+                            <i class="bi bi-moon-fill" id="theme-icon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section d-flex align-items-center bg-light">
-        <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-3 mt-5">Hi, I'm <span class="text-primary">Dipak</span></h1>
-            <h2 class="h3 text-secondary mb-4">.NET Full Stack Developer</h2>
-            <p class="lead mb-4 mx-auto text-muted" style="max-width: 650px;">
-                I build robust and scalable web applications using modern technologies. Passionate about creating seamless user experiences and efficient backend architectures.
-            </p>
-            <div class="d-flex justify-content-center gap-3 mt-4">
-                <a href="#contact" class="btn btn-outline-primary btn-lg px-4">Contact Me</a>
-                <!-- Resume Download Button Requirement -->
-                <a href="resume.pdf" download class="btn btn-primary btn-lg px-4 shadow-sm">
-                    <i class="fas fa-download me-2"></i>Download Resume
-                </a>
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="hero-bg-shapes"></div>
+        <div class="container position-relative z-1">
+            <div class="row align-items-center min-vh-100 pt-5">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2 rounded-pill">Hello, World!</span>
+                    <h1 class="display-3 fw-bold mb-3">I'm <span class="text-gradient">Dipak Chande</span></h1>
+                    <h2 class="h3 text-muted mb-4">
+                        A Passionate <span class="typing-text text-primary"></span>
+                    </h2>
+                    <p class="lead mb-5 text-secondary">
+                        Recent BBA-CA graduate turning ideas into robust, scalable software solutions. I specialize in building complete web applications from the ground up using Microsoft technologies.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#projects" class="btn btn-primary btn-lg rounded-pill px-4 btn-hover">
+                            View Work <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                        <a href="dipak_chande_resume.pdf" class="btn btn-outline-primary btn-lg rounded-pill px-4 btn-hover" download>
+                            Download Resume <i class="bi bi-download ms-2"></i>
+                        </a>
+                    </div>
+                    <div class="mt-5 d-flex gap-3 social-links">
+                        <a href="https://github.com/dipak921" class="text-secondary fs-4 hover-primary"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/dipak-chande/" class="text-secondary fs-4 hover-primary"><i class="bi bi-linkedin"></i></a>
+                        <a href="mailto:dipakchande@example.com" class="text-secondary fs-4 hover-primary"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-flex justify-content-center" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-image-wrapper">
+                        <!-- User's transparent photo -->
+                        <img src="img/dipak.png" alt="Dipak Chande" class="img-fluid profile-img">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="py-5">
-        <div class="container py-5">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-5 text-center d-flex justify-content-center">
-                    <div class="position-relative about-img-container">
-                        <!-- Elegant animated backdrop -->
-                        <div class="about-img-backdrop position-absolute rounded-circle shadow-sm"></div>
-                        <!-- Loading the custom local profile image -->
-                        <img src="img/dipak.png" alt="Dipak Profile" class="about-img img-fluid rounded-circle shadow-lg position-relative z-1">
+    <!-- About Section -->
+    <section id="about" class="py-6 section-bg">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">About <span class="text-primary">Me</span></h2>
+                <div class="title-underline mx-auto"></div>
+            </div>
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="glass-card p-4 p-md-5 rounded-4 h-100">
+                        <h3 class="h4 mb-4 fw-bold">Professional Summary</h3>
+                        <p class="text-secondary mb-4">
+                            I am a highly motivated fresher .NET Full Stack Developer with a Bachelor of Business Administration in Computer Applications (BBA-CA). I have a strong foundation in modern web development and a passion for creating efficient, user-centric software.
+                        </p>
+                        <h3 class="h5 fw-bold mt-4">Career Objective</h3>
+                        <p class="text-secondary">
+                            To secure a challenging position in a reputable organization where I can expand my learnings, knowledge, and skills while contributing to the company's growth as a software developer.
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-7">
-                    <h2 class="fw-bold mb-4">About <span class="text-primary">Me</span></h2>
-                    
-                    <h5 class="fw-semibold mb-2">Professional Summary</h5>
-                    <p class="text-muted mb-4 pb-2" style="line-height: 1.7;">
-                        A motivated and detail-oriented .NET Full Stack Developer with a strong foundation in web technologies and a passion for building scalable, user-friendly applications. Proficient in front-end frameworks like React.js and Bootstrap, as well as back-end development using C#, ASP.NET Core, and SQL Server. Quick learner, eager to contribute to a collaborative team and deliver high-quality software solutions.
-                    </p>
-                    
-                    <h5 class="fw-semibold mb-2">Career Objective</h5>
-                    <p class="text-muted mb-4 pb-2" style="line-height: 1.7;">
-                        To secure a challenging entry-level position as a Full Stack Developer where I can leverage my programming skills in ASP.NET Core, React.js, and SQL Server to build innovative web applications, while continuously learning and growing in a professional environment.
-                    </p>
-
-                    <h5 class="fw-semibold mb-3">Soft Skills</h5>
-                    <div class="row pt-2 text-muted g-3">
-                        <div class="col-sm-6 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-2"></i>Problem Solving</div>
-                        <div class="col-sm-6 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-2"></i>Adaptability & Quick Learner</div>
-                        <div class="col-sm-6 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-2"></i>Teamwork & Collaboration</div>
-                        <div class="col-sm-6 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-2"></i>Effective Communication</div>
-                        <div class="col-sm-6 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-2"></i>Time Management</div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 rounded-4 text-center hover-up">
+                                <div class="icon-box bg-primary-subtle text-primary mx-auto mb-3">
+                                    <i class="bi bi-laptop fs-3"></i>
+                                </div>
+                                <h4 class="h5 fw-bold">Frontend</h4>
+                                <p class="text-secondary mb-0 small">Responsive UI with HTML, CSS, JS, Bootstrap, and Angular.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 rounded-4 text-center hover-up">
+                                <div class="icon-box bg-success-subtle text-success mx-auto mb-3">
+                                    <i class="bi bi-server fs-3"></i>
+                                </div>
+                                <h4 class="h5 fw-bold">Backend</h4>
+                                <p class="text-secondary mb-0 small">Robust APIs and logic with C#, ASP.NET Core, and MVC.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 rounded-4 text-center hover-up">
+                                <div class="icon-box bg-warning-subtle text-warning mx-auto mb-3">
+                                    <i class="bi bi-database fs-3"></i>
+                                </div>
+                                <h4 class="h5 fw-bold">Database</h4>
+                                <p class="text-secondary mb-0 small">Data management with SQL Server and Entity Framework.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 rounded-4 text-center hover-up">
+                                <div class="icon-box bg-info-subtle text-info mx-auto mb-3">
+                                    <i class="bi bi-git fs-3"></i>
+                                </div>
+                                <h4 class="h5 fw-bold">Version Control</h4>
+                                <p class="text-secondary mb-0 small">Code management and collaboration using Git & GitHub.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -92,79 +147,73 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-5 bg-light">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Technical <span class="text-primary">Skills</span></h2>
-                <div class="divider mx-auto bg-primary"></div>
+    <section id="skills" class="py-6">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">My <span class="text-primary">Skills</span></h2>
+                <div class="title-underline mx-auto"></div>
             </div>
             
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm skill-card">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box bg-primary-subtle text-primary rounded-circle mb-4 mx-auto">
-                                <i class="fas fa-laptop-code fa-2x"></i>
-                            </div>
-                            <h5 class="fw-bold mb-3">Frontend</h5>
-                            <ul class="list-unstyled text-muted mb-0">
-                                <li class="mb-2">HTML & CSS</li>
-                                <li class="mb-2">JavaScript</li>
-                                <li class="mb-2">Bootstrap</li>
-                                <li>React.js</li>
-                            </ul>
-                        </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Skill Cards -->
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="skill-card glass-card rounded-4 p-4 text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" class="skill-icon mb-3">
+                        <h5 class="mb-0">C#</h5>
                     </div>
                 </div>
-                
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm skill-card">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box bg-success-subtle text-success rounded-circle mb-4 mx-auto">
-                                <i class="fas fa-server fa-2x"></i>
-                            </div>
-                            <h5 class="fw-bold mb-3">Backend</h5>
-                            <ul class="list-unstyled text-muted mb-0">
-                                <li class="mb-2">C#</li>
-                                <li class="mb-2">ASP.NET Core</li>
-                                <li class="mb-2">Web API</li>
-                                <li>Entity Framework</li>
-                            </ul>
-                        </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="skill-card glass-card rounded-4 p-4 text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".NET Core" class="skill-icon mb-3">
+                        <h5 class="mb-0">.NET Core</h5>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm skill-card">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box bg-info-subtle text-info rounded-circle mb-4 mx-auto">
-                                <i class="fas fa-database fa-2x"></i>
-                            </div>
-                            <h5 class="fw-bold mb-3">Database</h5>
-                            <ul class="list-unstyled text-muted mb-0">
-                                <li class="mb-2">SQL Server</li>
-                                <li class="mb-2">Relational Design</li>
-                                <li class="mb-2">T-SQL</li>
-                                <li>Data Modeling</li>
-                            </ul>
-                        </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="skill-card glass-card rounded-4 p-4 text-center">
+                        <i class="bi bi-microsoft skill-icon text-primary mb-3 fs-1"></i>
+                        <h5 class="mb-0">ASP.NET MVC</h5>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm skill-card">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box bg-warning-subtle text-warning rounded-circle mb-4 mx-auto">
-                                <i class="fas fa-tools fa-2x"></i>
-                            </div>
-                            <h5 class="fw-bold mb-3">Tools</h5>
-                            <ul class="list-unstyled text-muted mb-0">
-                                <li class="mb-2">Git</li>
-                                <li class="mb-2">Visual Studio</li>
-                                <li class="mb-2">VS Code</li>
-                                <li>Postman</li>
-                            </ul>
-                        </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="skill-card glass-card rounded-4 p-4 text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" class="skill-icon mb-3">
+                        <h5 class="mb-0">SQL Server</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="skill-card glass-card rounded-4 p-4 text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-icon mb-3">
+                        <h5 class="mb-0">HTML5</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="skill-card glass-card rounded-4 p-4 text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-icon mb-3">
+                        <h5 class="mb-0">CSS3</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="350">
+                    <div class="skill-card glass-card rounded-4 p-4 text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon mb-3">
+                        <h5 class="mb-0">JavaScript</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="skill-card glass-card rounded-4 p-4 text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-icon mb-3">
+                        <h5 class="mb-0">Bootstrap 5</h5>
+                    </div>
+                </div>
+                <!-- <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="450">
+                    <div class="skill-card glass-card rounded-4 p-4 text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" class="skill-icon mb-3">
+                        <h5 class="mb-0">Angular</h5>
+                    </div>
+                </div> -->
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="skill-card glass-card rounded-4 p-4 text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon mb-3">
+                        <h5 class="mb-0">Git & GitHub</h5>
                     </div>
                 </div>
             </div>
@@ -172,76 +221,68 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">My <span class="text-primary">Projects</span></h2>
-                <div class="divider mx-auto bg-primary"></div>
+    <section id="projects" class="py-6 section-bg">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Featured <span class="text-primary">Projects</span></h2>
+                <div class="title-underline mx-auto"></div>
             </div>
 
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
                 <!-- Project 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm project-card overflow-hidden">
-                        <div class="card-img-top bg-dark text-white d-flex align-items-center justify-content-center flex-column" style="height: 220px; background: linear-gradient(45deg, #1f2937, #374151);">
-                            <i class="fas fa-chalkboard-teacher fa-3x mb-3 text-primary"></i>
-                            <span class="fs-5 fw-bold">Tutor Management</span>
+                <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card project-card h-100 border-0 rounded-4 overflow-hidden glass-card">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Tutor Management System">
+                            <div class="project-overlay">
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="btn btn-light rounded-circle btn-icon" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+                                    <a href="#" class="btn btn-light rounded-circle btn-icon" title="GitHub"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body p-4 d-flex flex-column">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Tutor Management System</h5>
+                            <p class="card-text text-secondary small">A web application with role-based access for Admin, Tutor, and Student, enabling better communication and activity tracking.</p>
                             <div class="mb-3">
-                                <span class="badge bg-primary-subtle text-primary fw-semibold rounded-pill">Web Application</span>
+                                <span class="badge bg-primary-subtle text-primary me-1 mb-1">ASP.NET (C#)</span>
+                                <span class="badge bg-primary-subtle text-primary me-1 mb-1">SQL Server</span>
                             </div>
-                            <h5 class="card-title fw-bold mb-3">Tutor Management System</h5>
-                            <p class="card-text text-muted" style="font-size: 0.95rem;">A comprehensive web application designed to streamline the process of finding and managing tutors. Implemented user authentication, tutor profiles, booking management, and a robust admin dashboard using ASP.NET Core and SQL Server.</p>
-                        </div>
-                        <div class="card-footer bg-white border-top-0 p-4 pt-0">
-                            <div class="d-flex gap-2 flex-wrap text-muted" style="font-size: 0.85rem; font-weight: 500;">
-                                <span>ASP.NET Core</span> • <span>SQL Server</span> • <span>C#</span>
-                            </div>
+                            <ul class="list-unstyled text-secondary small mb-0">
+                                <li><i class="bi bi-check2 text-success me-2"></i>Role-based Access Control</li>
+                                <li><i class="bi bi-check2 text-success me-2"></i>Activity Tracking</li>
+                                <li><i class="bi bi-check2 text-success me-2"></i>Tutor & Student Portals</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm project-card overflow-hidden">
-                        <div class="card-img-top bg-dark text-white d-flex align-items-center justify-content-center flex-column" style="height: 220px; background: linear-gradient(45deg, #065f46, #047857);">
-                            <i class="fas fa-laptop-code fa-3x mb-3 text-success"></i>
-                            <span class="fs-5 fw-bold">UpSkillLab</span>
+                <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card project-card h-100 border-0 rounded-4 overflow-hidden glass-card">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="UpSkillLab">
+                            <div class="project-overlay">
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="btn btn-light rounded-circle btn-icon" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+                                    <a href="#" class="btn btn-light rounded-circle btn-icon" title="GitHub"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body p-4 d-flex flex-column">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">UpSkillLab - E-Learning</h5>
+                            <p class="card-text text-secondary small">A responsive frontend UI project with multi-page navigation layout and mobile-friendly reusable UI components.</p>
                             <div class="mb-3">
-                                <span class="badge bg-success-subtle text-success fw-semibold rounded-pill">Frontend UI Project</span>
+                                <span class="badge bg-primary-subtle text-primary me-1 mb-1">HTML</span>
+                                <span class="badge bg-primary-subtle text-primary me-1 mb-1">CSS</span>
+                                <span class="badge bg-primary-subtle text-primary me-1 mb-1">Bootstrap</span>
+                                <span class="badge bg-primary-subtle text-primary me-1 mb-1">JavaScript</span>
                             </div>
-                            <h5 class="card-title fw-bold mb-3">UpSkillLab – E-Learning App</h5>
-                            <p class="card-text text-muted" style="font-size: 0.95rem;">Designed and developed the user interface for an interactive e-learning platform. Focused on creating a highly responsive and modern user experience with smooth navigation and adaptive layouts.</p>
-                        </div>
-                        <div class="card-footer bg-white border-top-0 p-4 pt-0">
-                            <div class="d-flex gap-2 flex-wrap text-muted" style="font-size: 0.85rem; font-weight: 500;">
-                                <span>HTML</span> • <span>CSS</span> • <span>Bootstrap</span> • <span>React.js</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm project-card overflow-hidden">
-                        <div class="card-img-top bg-dark text-white d-flex align-items-center justify-content-center flex-column" style="height: 220px; background: linear-gradient(45deg, #1e3a8a, #1d4ed8);">
-                            <i class="fas fa-book-reader fa-3x mb-3 text-info"></i>
-                            <span class="fs-5 fw-bold">study2Crack</span>
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <div class="mb-3">
-                                <span class="badge bg-info-subtle text-info fw-semibold rounded-pill">Full Stack Web App</span>
-                            </div>
-                            <h5 class="card-title fw-bold mb-3">study2Crack – E-Learning</h5>
-                            <p class="card-text text-muted" style="font-size: 0.95rem;">Developed a robust, scalable e-learning platform. Implemented a course-centric topic management system, secure authentication, and a responsive public interface for course browsing and learning.</p>
-                        </div>
-                        <div class="card-footer bg-white border-top-0 p-4 pt-0">
-                            <div class="d-flex gap-2 flex-wrap text-muted" style="font-size: 0.85rem; font-weight: 500;">
-                                <span>ASP.NET Core MVC</span> • <span>Entity Framework</span>
-                            </div>
+                            <ul class="list-unstyled text-secondary small mb-0">
+                                <li><i class="bi bi-check2 text-success me-2"></i>Animations & Counters</li>
+                                <li><i class="bi bi-check2 text-success me-2"></i>Course Cards</li>
+                                <li><i class="bi bi-check2 text-success me-2"></i>Responsive Design</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -249,67 +290,61 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-5 bg-light">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">My <span class="text-primary">Education</span></h2>
-                <div class="divider mx-auto bg-primary"></div>
-            </div>
-            
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="timeline position-relative">
-                        <!-- Education Item 1 -->
-                        <div class="timeline-item position-relative mb-4">
-                            <div class="d-flex flex-column flex-md-row align-items-md-start gap-4">
-                                <div class="timeline-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 shadow m-0 mx-md-0 mx-auto" style="width: 70px; height: 70px;">
-                                    <i class="fas fa-user-graduate fa-2x"></i>
-                                </div>
-                                <div class="timeline-content bg-white p-4 rounded shadow-sm w-100 border-start border-4 border-primary">
-                                    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-3">
-                                        <h4 class="fw-bold mb-2 mb-sm-0">BBA in Computer Applications</h4>
-                                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">Aug 2022 – Apr 2025</span>
-                                    </div>
-                                    <h6 class="text-primary fw-bold mb-3"><i class="fas fa-university me-2"></i>Savitribai Phule Pune University, Pune</h6>
-                                    <p class="text-muted mb-0">Acquired comprehensive knowledge encompassing modern software development, web programming, algorithms, database systems, and fundamental business applications.</p>
-                                </div>
+    <!-- Education & Experience Section -->
+    <section id="education" class="py-6">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Education -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="section-title mb-5">
+                        <h2 class="fw-bold"><i class="bi bi-mortarboard text-primary me-2"></i> Education</h2>
+                    </div>
+                    <div class="timeline position-relative ps-4">
+                        <div class="timeline-item pb-4 position-relative">
+                            <div class="timeline-dot position-absolute bg-primary rounded-circle shadow"></div>
+                            <div class="glass-card p-4 rounded-4">
+                                <h5 class="fw-bold mb-1">BBA in Computer Applications (BBA-CA)</h5>
+                                <p class="text-primary fw-medium mb-2">B.P.H.E. Society's Ahmednagar College | 2022 - 2025</p>
+                                <p class="text-secondary small mb-0">Graduated with a strong foundation in computer applications, programming principles, databases, and software engineering. Excelled in web technologies and modern development practices.</p>
                             </div>
                         </div>
+                        <div class="timeline-item pb-4 position-relative">
+                            <div class="timeline-dot position-absolute bg-primary rounded-circle shadow"></div>
+                            <div class="glass-card p-4 rounded-4">
+                                <h5 class="fw-bold mb-1">Higher Secondary Certificate (HSC)</h5>
+                                <p class="text-primary fw-medium mb-2">Shri Chhatrapati Shivaji College Karjgaon | June 2021 - Mar 2022</p>
+                                <p class="text-secondary small mb-0">Completed higher secondary education with a focus on science and mathematics, building strong analytical and problem-solving skills.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                        <!-- Education Item 2 -->
-                        <div class="timeline-item position-relative mb-4">
-                            <div class="d-flex flex-column flex-md-row align-items-md-start gap-4">
-                                <div class="timeline-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 shadow m-0 mx-md-0 mx-auto" style="width: 70px; height: 70px;">
-                                    <i class="fas fa-book-open fa-2x"></i>
-                                </div>
-                                <div class="timeline-content bg-white p-4 rounded shadow-sm w-100 border-start border-4 border-primary">
-                                    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-3">
-                                        <h4 class="fw-bold mb-2 mb-sm-0">HSC</h4>
-                                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">June 2021 – Mar 2022</span>
-                                    </div>
-                                    <h6 class="text-primary fw-bold mb-3"><i class="fas fa-university me-2"></i>Shri Chhatrapati Shivaji College Karjgaon</h6>
-                                    <p class="text-muted mb-0">Completed Higher Secondary Certificate. Scored: <strong>64%</strong></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Education Item 3 -->
-                        <div class="timeline-item position-relative mb-4">
-                            <div class="d-flex flex-column flex-md-row align-items-md-start gap-4">
-                                <div class="timeline-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 shadow m-0 mx-md-0 mx-auto" style="width: 70px; height: 70px;">
-                                    <i class="fas fa-school fa-2x"></i>
-                                </div>
-                                <div class="timeline-content bg-white p-4 rounded shadow-sm w-100 border-start border-4 border-primary">
-                                    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-3">
-                                        <h4 class="fw-bold mb-2 mb-sm-0">SSC</h4>
-                                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">June 2019 – Mar 2020</span>
-                                    </div>
-                                    <h6 class="text-primary fw-bold mb-3"><i class="fas fa-school me-2"></i>Shivchidambar School Ganeshwadi</h6>
-                                    <p class="text-muted mb-0">Completed Secondary School Certificate. Scored: <strong>67.20%</strong></p>
+                <!-- Certifications -->
+                <div class="col-lg-6" id="certifications" data-aos="fade-left">
+                    
+                    <!-- Certifications -->
+                    <div class="section-title mt-5 mb-4">
+                        <h3 class="h4 fw-bold"><i class="bi bi-award text-primary me-2"></i> Certifications</h3>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="glass-card p-3 rounded-3 d-flex align-items-center gap-3 hover-up border-start border-primary border-4">
+                                <i class="bi bi-patch-check-fill text-primary fs-3"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">FULL STACK .NET</h6>
+                                    <small class="text-secondary">Fortune Cloud Technologies</small>
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="col-sm-6">
+                            <div class="glass-card p-3 rounded-3 d-flex align-items-center gap-3 hover-up border-start border-primary border-4">
+                                <i class="bi bi-patch-check-fill text-primary fs-3"></i>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Full Stack Web Dev</h6>
+                                    <small class="text-secondary">Udemy</small>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -317,88 +352,89 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
+    <section id="contact" class="py-6 section-bg">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2 class="fw-bold">Get In <span class="text-primary">Touch</span></h2>
-                <div class="divider mx-auto bg-primary"></div>
-                <p class="text-muted mt-3">Interested in working together or have a question? Feel free to reach out!</p>
+                <div class="title-underline mx-auto"></div>
+                <p class="text-secondary mt-3">Currently looking for new opportunities as a .NET Full Stack Developer.</p>
             </div>
-            
-            <div class="row g-5 justify-content-center">
-                <div class="col-lg-4">
-                    <div class="contact-info bg-white border text-dark p-5 rounded-4 shadow h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <h3 class="fw-bold mb-4">Contact Information</h3>
-                            
-                            <div class="d-flex align-items-center mb-4 mt-5">
-                                <div class="icon-box bg-primary text-white rounded-circle shadow-sm me-4 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
-                                    <i class="fas fa-envelope fs-5"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-1 fw-bold text-dark">Email</h6>
-                                    <a href="mailto:dipak@example.com" class="text-secondary text-decoration-none">dipakchande921@gmail.com</a>
-                                </div>
-                            </div>
-                            
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="icon-box bg-primary text-white rounded-circle shadow-sm me-4 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
-                                    <i class="fas fa-phone fs-5"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-1 fw-bold text-dark">Phone</h6>
-                                    <span class="text-secondary">+91 9373570576</span>
-                                </div>
-                            </div>
 
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="icon-box bg-primary text-white rounded-circle shadow-sm me-4 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
-                                    <i class="fas fa-map-marker-alt fs-5"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-1 fw-bold text-dark">Location</h6>
-                                    <span class="text-secondary">Pune, Maharashtra</span>
-                                </div>
+            <div class="row g-5">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="glass-card p-5 rounded-4 h-100">
+                        <h4 class="fw-bold mb-4">Contact Information</h4>
+                        <div class="d-flex align-items-start gap-3 mb-4">
+                            <div class="icon-box bg-primary-subtle text-primary rounded-circle">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Email</h6>
+                                <a href="mailto:dipakchande@example.com" class="text-secondary text-decoration-none hover-primary">dipakchande@example.com</a>
                             </div>
                         </div>
-
-                        <div class="mt-5 pt-4 border-top">
-                            <div class="d-flex gap-3 justify-content-start">
-                                <a href="https://www.linkedin.com/in/dipak-chande/" class="social-icon bg-light text-dark rounded-circle shadow-sm d-flex align-items-center justify-content-center"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://github.com/dipak921" class="social-icon bg-light text-dark rounded-circle shadow-sm d-flex align-items-center justify-content-center"><i class="fab fa-github"></i></a>
-                                <a href="https://x.com/dipak_chande_04" class="social-icon bg-light text-dark rounded-circle shadow-sm d-flex align-items-center justify-content-center"><i class="fab fa-twitter"></i></a>
+                        <div class="d-flex align-items-start gap-3 mb-4">
+                            <div class="icon-box bg-primary-subtle text-primary rounded-circle">
+                                <i class="bi bi-telephone"></i>
                             </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Phone</h6>
+                                <a href="tel:+919373570576" class="text-secondary text-decoration-none hover-primary">+91 9373570576</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start gap-3 mb-4">
+                            <div class="icon-box bg-primary-subtle text-primary rounded-circle">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Location</h6>
+                                <span class="text-secondary">Pune, Maharashtra, India</span>
+                            </div>
+                        </div>
+                        
+                        <h6 class="fw-bold mt-5 mb-3">Connect with me</h6>
+                        <div class="d-flex gap-2">
+                            <a href="https://www.linkedin.com/in/dipak-chande/" class="btn btn-outline-primary rounded-circle btn-icon"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/dipak921" class="btn btn-outline-primary rounded-circle btn-icon"><i class="bi bi-github"></i></a>
+                            <a href="https://x.com/dipak_chande_04" class="btn btn-outline-primary rounded-circle btn-icon"><i class="bi bi-twitter"></i></a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-lg-8">
-                    <div class="card border-0 shadow-sm p-4 p-md-5 rounded-4 h-100">
-                        <div class="card-body p-0">
-                            <h3 class="fw-bold mb-4">Send a Message</h3>
-                            <form id="contactForm">
-                                <div class="row g-4">
-                                    <div class="col-md-6">
-                                        <label for="name" class="form-label fw-semibold text-secondary">Your Name</label>
-                                        <input type="text" class="form-control form-control-lg bg-light border-0" id="name" placeholder="John Doe" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="email" class="form-label fw-semibold text-secondary">Your Email</label>
-                                        <input type="email" class="form-control form-control-lg bg-light border-0" id="email" placeholder="john@example.com" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="subject" class="form-label fw-semibold text-secondary">Subject</label>
-                                        <input type="text" class="form-control form-control-lg bg-light border-0" id="subject" placeholder="Project Inquiry" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="message" class="form-label fw-semibold text-secondary">Message</label>
-                                        <textarea class="form-control form-control-lg bg-light border-0" id="message" rows="5" placeholder="Your message here..." required></textarea>
-                                    </div>
-                                    <div class="col-12 mt-4">
-                                        <button type="submit" class="btn btn-primary btn-lg px-5 py-3 fw-bold rounded-pill shadow-sm">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
-                                    </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="glass-card p-5 rounded-4">
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label fw-medium">Full Name</label>
+                                    <input type="text" class="form-control form-control-lg custom-input" id="name" placeholder="Dipak Chande" required>
+                                    <div class="invalid-feedback">Please enter your name.</div>
                                 </div>
-                            </form>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-medium">Email Address</label>
+                                    <input type="email" class="form-control form-control-lg custom-input" id="email" placeholder="dipakchande@example.com" required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label fw-medium">Subject</label>
+                                    <input type="text" class="form-control form-control-lg custom-input" id="subject" placeholder="Project Inquiry" required>
+                                    <div class="invalid-feedback">Please enter a subject.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label fw-medium">Message</label>
+                                    <textarea class="form-control custom-input" id="message" rows="5" placeholder="Your message here..." required></textarea>
+                                    <div class="invalid-feedback">Please enter your message.</div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill btn-hover">
+                                        Send Message <i class="bi bi-send ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- Form Success Message -->
+                        <div id="formSuccess" class="alert alert-success mt-4 d-none" role="alert">
+                            <i class="bi bi-check-circle-fill me-2"></i> Your message has been sent successfully!
                         </div>
                     </div>
                 </div>
@@ -407,14 +443,33 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 text-center border-top border-secondary border-opacity-25">
+    <footer class="footer py-4 text-center glass-footer">
         <div class="container">
-            <p class="mb-0 text-white-50">&copy; <span id="year"></span> Dipak. All Rights Reserved. Built with <i class="fas fa-heart text-danger"></i> using Bootstrap 5.</p>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-md-start mb-3 mb-md-0">
+                    <p class="mb-0 text-secondary">&copy; <span id="currentYear"></span> Dipak Chande. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links-footer">
+                        <a href="https://github.com/dipak921" class="text-secondary mx-2 hover-primary"><i class="bi bi-github fs-5"></i></a>
+                        <a href="https://www.linkedin.com/in/dipak-chande/" class="text-secondary mx-2 hover-primary"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="mailto:dipakchande@example.com" class="text-secondary mx-2 hover-primary"><i class="bi bi-envelope fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary rounded-circle back-to-top shadow" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Scroll Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
